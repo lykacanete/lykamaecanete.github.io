@@ -1,0 +1,996 @@
+
+/***** 01. Sass Variables *****/
+/* Colors */
+/* dark blue */
+/* gold */
+/* lighter gold */
+/* light gray */
+/* Fonts */
+/***** 02. General Styles *****/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font: 300 16px/26px "Poppins", sans-serif;
+  color: #071a24; }
+
+h1 {
+  font: 300 36px/46px "Poppins", sans-serif; }
+
+h2 {
+  font: 500 25px/34px "Poppins", sans-serif; }
+
+h3 {
+  font: 500 21px/30px "Poppins", sans-serif; }
+
+p {
+  font: 300 16px/26px "Poppins", sans-serif; }
+
+a {
+  color: #071a24;
+  text-decoration: underline; }
+
+a:hover {
+  color: #000; }
+
+
+/* Carousel */
+.carousel-control .glyphicon-menu-right,
+.carousel-control .glyphicon-menu-left {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+  font-size: 30px; }
+
+.carousel-control .glyphicon-menu-left {
+  left: 50%;
+  margin-left: -10px; }
+
+.carousel-control .glyphicon-menu-right {
+  right: 50%;
+  margin-right: -10px; }
+
+a.left.carousel-control, a.right.carousel-control {
+  opacity: 1; }
+
+.right.carousel-control {
+  background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 100%); }
+
+.left.carousel-control {
+  background-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.5) 100%); }
+
+/* Heading Text Underline */
+.underline {
+  display: inline-block; }
+
+.underline:after {
+  display: block;
+  content: "";
+  width: 50%;
+  margin: 7px  auto 0 auto;
+  border-bottom: solid 2px #ddb24a; }
+
+/* Forms succes and error alerts formatting */
+#dmsgSubmit.h3.text-center.tada.animated.text-success {
+  font: 300 20px/32px "Poppins", sans-serif;
+  color: #fff; }
+
+#dmsgSubmit.h3.text-center.text-danger {
+  font: 300 20px/32px "Poppins", sans-serif;
+  color: #fff; }
+
+#cmsgSubmit.h3.text-center.tada.animated.text-success {
+  font: 300 20px/32px "Poppins", sans-serif;
+  color: #071a24; }
+
+#cmsgSubmit.h3.text-center.text-danger {
+  font: 300 20px/32px "Poppins", sans-serif;
+  color: #071a24; }
+
+/***** 03. Navigation *****/
+/* Image Logo */
+.navbar-brand.img-logo {
+  width: 101px;
+  height: 35px;
+  padding: 4px 0 0 0; }
+
+/* Navbar */
+.navbar-custom {
+  background-color: #4d004d;
+  border-color: transparent;
+  font: 300 14px/22px "Poppins", sans-serif; }
+
+.navbar-custom .navbar-brand {
+  color: #fff; }
+
+a.navbar-brand.img-logo {
+  margin-left: 10px;
+  margin-top: 60px; }
+
+a.navbar-brand.img-logo.scrolling {
+  margin-top: 6px;
+  margin-left: 15px; }
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand.active {
+  color: #fff;
+  opacity: 1; }
+
+.navbar-custom .navbar-collapse {
+  border-color: rgba(255, 255, 255, 0.02); }
+
+.navbar-custom .navbar-toggle,
+.navbar-custom .navbar-toggle:focus {
+  background-color: black;
+  border-color: black;
+  color: #071a24;
+  font: 300 14px/19px "Poppins", sans-serif; }
+
+.navbar-custom .navbar-toggle:hover {
+  color: #071a24;
+  background-color: #edc25b; }
+
+.navbar-custom .nav li a.scrolling {
+  color: #fff;
+  opacity: 0.7;
+  text-decoration: none; }
+
+.navbar-custom .nav li a:hover {
+  color: #fff;
+  outline: none;
+  opacity: 1; }
+
+.navbar-custom .navbar-nav > .active > a.scrolling {
+  border-radius: 0;
+  color: #fff;
+  background-color: transparent;
+  opacity: 1; }
+
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent; }
+
+a.navbar-brand.scrolling {
+  text-decoration: none;
+  font: 300 26px/20px "Poppins", sans-serif;
+  color: #fff;
+  margin-top: 4px; }
+
+.navbar-custom.affix .navbar-brand {
+  font: 300 26px/20px "Poppins", sans-serif; }
+/* end of navigation */
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  background-image: linear-gradient(180deg, #cc99ff, #a64dff, #6600cc);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  float: right;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+}
+
+.title h1{
+  font: 40px "Tahoma", sans-serif;
+  position: relative;
+  color: white;
+}
+
+.text p{
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  color: white;
+  font-style: italic;
+}
+
+/** Photo in the page **/
+.photo img{
+  float: left;
+  width: 300px;
+  height: auto;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.photo2 img{
+  float: left;
+  width: 180px;
+  height: auto;
+  margin-top: 160px;
+  margin-left: 30px;
+}
+
+.photo3 img{
+  float: left;
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+/* Header */
+
+header .header-buttons {
+      margin-top: 25px;
+      text-align: center;
+      background: pink; }
+      header .header-buttons a {
+        display: inline-block;
+        margin-right: 5px;
+        padding: 6px 30px 6px 30px;
+        background: maroon; }
+      header .header-content .header-buttons .button-large-transparent {
+        margin-top: 20px;
+        padding: 6px 30px 6px 30px; }
+
+#personal-section {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, #ffe6e6, #ffcccc); }
+  #personal-section #myCarousel {
+    display: inline-block;
+    margin-top: 50px; }
+    #personal-section #myCarousel .carousel-control.left {
+      background: none;
+      margin-top: -140px;
+      opacity: 0.9; }
+    #personal-section #myCarousel .carousel-control.right {
+      right: 0;
+      left: auto;
+      background: none;
+      margin-top: -140px;
+      opacity: 0.7; }
+    #personal-section #myCarousel .carousel-control:hover,
+    #personal-section #myCarousel .carousel-control:focus {
+      color: #fff;
+      text-decoration: none;
+      filter: alpha(opacity=90);
+      outline: 0;
+      opacity: 1; }
+    #personal-section #myCarousel .carousel-caption {
+      position: relative;
+      right: 0%;
+      margin-bottom: 20px;
+      left: 0%;
+      z-index: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #071a24;
+      text-align: center;
+      text-shadow: none; }
+      #personal-section #myCarousel .carousel-caption p {
+        margin-top: 23px;
+        margin-bottom: 2px; }
+    #personal-section #myCarousel .carousel-indicators li {
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #071a24;
+      border-radius: 10px; }
+    #personal-section #myCarousel .carousel-indicators .active {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background-color: #071a24; }
+
+/***** Personal Section 
+#personal-section {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, #ffb3b3, #ffe6e6); }
+  #personal-section #myCarousel {
+    display: inline-block;
+    margin-top: 50px; }
+    #personal-section #myCarousel .carousel-control.left {
+      background: none;
+      margin-top: -140px;
+      opacity: 0.9; }
+    #personal-section #myCarousel .carousel-control.right {
+      right: 0;
+      left: auto;
+      background: none;
+      margin-top: -140px;
+      opacity: 0.7; }
+    #personal-section #myCarousel .carousel-control:hover,
+    #personal-section #myCarousel .carousel-control:focus {
+      color: #fff;
+      text-decoration: none;
+      filter: alpha(opacity=90);
+      outline: 0;
+      opacity: 1; }
+    #personal-section #myCarousel .carousel-caption {
+      position: relative;
+      right: 0%;
+      margin-bottom: 20px;
+      left: 0%;
+      z-index: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #071a24;
+      text-align: center;
+      text-shadow: none; }
+      #personal-section #myCarousel .carousel-caption p {
+        margin-top: 23px;
+        margin-bottom: 2px; }
+    #personal-section #myCarousel .carousel-indicators li {
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #ffcccc;
+      border-radius: 10px; }
+    #personal-section #myCarousel .carousel-indicators .active {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background-color: #ffcccc; } **/
+
+/***** Family Background Section 
+#family-background-section {
+  padding-top: 70px;
+  padding-bottom: 90px; }
+  #family-background-section h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-align: center; }
+  #family-background-section .first-row img {
+    width: 100%;
+    margin-bottom: 40px; }
+  #family-background-section .first-row h2 {
+    margin-bottom: 20px; }
+  #family-background-section .first-row .button-small-solid {
+    display: inline-block;
+    margin-top: 15px; }
+  #family-background-section .second-row {
+    margin-top: 100px; }
+    #family-background-section .second-row img {
+      width: 100%;
+      margin-bottom: 40px; }
+    #family-background-section .second-row .nav-pills {
+      margin-top: 0px;
+      margin-bottom: 30px; }
+      #family-background-section .second-row .nav-pills li {
+        text-align: center;
+        width: 100%; }
+        #family-background-section .second-row .nav-pills li a {
+          font: 300 18px/26px "Poppins", sans-serif;
+          background-color: none;
+          color: #6a6a6a;
+          border: 1px solid #aaa;
+          border-radius: 25px;
+          margin-right: 4px;
+          margin-top: 10px;
+          padding: 10px 30px 10px 30px;
+          text-decoration: none; }
+      #family-background-section .second-row .nav-pills li a:hover {
+        background-color: #071a24;
+        color: #fff;
+        border: 1px solid #071a24; }
+      #family-background-section .second-row .nav-pills li.active a {
+        background-color: #071a24;
+        color: #fff;
+        border: 1px solid #071a24; }
+    #family-background-section .second-row #tab_a ul {
+      list-style: none; }
+    #family-background-section .second-row #tab_a .button-small-solid {
+      display: inline-block;
+      margin-top: 15px; }
+    #famiy-background-section .second-row #tab_b {
+      margin-top: 20px; }
+      #family-background-section .second-row #tab_b .progress {
+        height: 30px;
+        border-radius: 4px;
+        margin-top: 20px; }
+      #family-background-section .second-row #tab_b .progress-bar {
+        text-align: left;
+        font: 300 14px/22px "Poppins", sans-serif;
+        background-color: #ddb24a;
+        color: white;
+        padding-left: 20px;
+        padding-top: 5px; }
+    #family-background-section .second-row #tab_c .button-small-solid {
+      display: inline-block;
+      margin-top: 15px; }
+    #family-background-section .second-row .tab-content ul {
+      padding-left: 20px; }
+      #family-background-section .second-row .tab-content ul .checkmark {
+        margin-right: 10px; }
+.text3 p{
+  font-size: 18px;
+  font-family: Century Gothic, sans-serif;
+  float: center;
+  margin-left: 50px;
+}
+
+.text3 h1{
+  font-size: 23px;
+  font-family: Century Gothic, sans-serif;
+  text-align: center;
+}  **/
+
+/** Family Background**/
+#family-background-section {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background: #f2f2f2; }
+  #family-background-section #myCarousel {
+    display: inline-block;
+    margin-top: 50px; }
+    #family-background-section #myCarousel .carousel-control.left {
+      background: none;
+      margin-top: -140px;
+      opacity: 0.9; }
+    #family-background-section #myCarousel .carousel-control.right {
+      right: 0;
+      left: auto;
+      background: none;
+      margin-top: -140px;
+      opacity: 0.7; }
+    #family-background-section #myCarousel .carousel-control:hover,
+    #family-backround-section #myCarousel .carousel-control:focus {
+      color: #fff;
+      text-decoration: none;
+      filter: alpha(opacity=90);
+      outline: 0;
+      opacity: 1; }
+    #family-background-section #myCarousel .carousel-caption {
+      position: relative;
+      right: 0%;
+      margin-bottom: 20px;
+      left: 0%;
+      z-index: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #071a24;
+      text-align: center;
+      text-shadow: none; }
+      #family-background-section #myCarousel .carousel-caption p {
+        margin-top: 23px;
+        margin-bottom: 2px; }
+    #family-background-section #myCarousel .carousel-indicators li {
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #071a24;
+      border-radius: 10px; }
+    #family-background-section #myCarousel .carousel-indicators .active {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background-color: #071a24; }
+
+/***** Educational Background Section *****/
+#educ-background-section {
+  padding-top: 90px;
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, #e5e5e5, #8c8c8c); }
+  #educ-background-section #myCarousel {
+    display: inline-block;
+    margin-top: 50px; }
+    #educ-background-section #myCarousel .carousel-control.left {
+      background: none;
+      margin-top: -140px;
+      opacity: 0.9; }
+    #educ-background-section #myCarousel .carousel-control.right {
+      right: 0;
+      left: auto;
+      background: none;
+      margin-top: -140px;
+      opacity: 0.7; }
+    #educ-background-section #myCarousel .carousel-control:hover,
+    #educ-backround-section #myCarousel .carousel-control:focus {
+      color: #fff;
+      text-decoration: none;
+      filter: alpha(opacity=90);
+      outline: 0;
+      opacity: 1; }
+    #educ-background-section #myCarousel .carousel-caption {
+      position: relative;
+      right: 0%;
+      margin-bottom: 20px;
+      left: 0%;
+      z-index: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color: #071a24;
+      text-align: center;
+      text-shadow: none; }
+      #educ-background-section #myCarousel .carousel-caption p {
+        margin-top: 23px;
+        margin-bottom: 2px; }
+    #educ-background-section #myCarousel .carousel-indicators li {
+      display: inline-block;
+      width: 12px;
+      height: 15px;
+      margin: 1px;
+      text-indent: -999px;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #071a24;
+      border-radius: 10px; }
+    #educ-background-section #myCarousel .carousel-indicators .active {
+      width: 10px;
+      height: 10px;
+      margin: 0;
+      background-color: #071a24; }
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 60%;
+  padding: 5px 10px;
+  top: 10%;
+  left: 10%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  float: center;
+  position: relative;
+}
+
+.table, th, td {
+  float: center;
+  border-style: none;
+  table-layout: auto;
+  font-family: Century Gothic;
+  font-style: normal;
+  font-size: 15px;
+  padding: 9px;
+  border: 0;
+  top: 30%;
+  margin-right: 50%;
+}
+
+.table th{
+  text-align: center;
+}
+
+
+/***** Hobbies Section *****/
+#hobbies-section {
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background: linear-gradient(180deg, #1f1f7a, #24248f, #6600cc);
+  background-size: cover;
+  background-attachment: fixed; }
+  #hobbies-section h1 {
+    margin-bottom: 50px;
+    color: #fff; }
+  #hobbies-section p {
+    margin-bottom: 60px;
+    color: #fff; }
+  #hobbies-section form {
+    /* firefox 19+ */
+    /* ie */ }
+    #hobbies-section form input {
+      height: 42px;
+      background: transparent;
+      font: 300 16px/26px "Poppins", sans-serif;
+      color: #fff;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin-top: 20px; }
+    #hobbies-section form input:focus {
+      box-shadow: 0 4px 2px -2px #51cbee; }
+    #hobbies-section form ::-webkit-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #hobbies-section form ::-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #hobbies-section form :-ms-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #hobbies-section form input:-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #hobbies-section form button {
+      margin-top: 20px; }
+
+.text2 p{
+  font-size: 18px;
+  font-family: Century Gothic;
+}
+
+
+.text2 h1{
+  font-size: 23px;
+  font-family: Century Gothic;
+  text-align: center;
+}
+
+
+/***** Skills and Talents Section *****/
+#skills-talents-section {
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background: #f2f2f2; }
+  #skills-talents-section h1 {
+    margin-bottom: 50px; }
+  #skills-talents-section p {
+    margin-bottom: 60px; }
+  #skills-talents-section h2 {
+    font-weight: 300;
+    margin-top: 60px;
+    margin-bottom: 40px; }
+  #skills-talents-section img {
+    width: 90%;
+    border-radius: 10px; }
+  #skills-talents-section .development-process {
+    text-align: left; }
+    #skills-talents-section .development-process .process-container {
+      margin-top: 40px; }
+    #skills-talents-section .development-process p {
+      margin-left: 0%;
+      margin-right: 0%; }
+    #skills-talents-section .development-process .about-us-icons {
+      font-size: 38px;
+      color: #ddb24a;
+      float: left;
+      margin-top: 3px; }
+    #skills-talents-section .development-process .text-div {
+      margin-left: 55px;
+      margin-top: 10px; }
+      #skills-talents-section .development-process .text-div h3 {
+        display: inline; }
+      #skills-talents-section .development-process .text-div p {
+        margin-bottom: 5px; }
+
+/***** Strengths Section *****/
+#strength-weakness-section {
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background: linear-gradient(180deg, #cc99ff, #a64dff, #6600cc);
+  background-size: cover;
+  background-attachment: fixed; }
+  #strength-weakness-section h1 {
+    margin-bottom: 50px;
+    color: #fff; }
+  #strength-weakness-section p {
+    margin-bottom: 60px;
+    color: #fff; }
+  #strength-weakness-section form {
+    /* firefox 19+ */
+    /* ie */ }
+    #strength-weakness-section form input {
+      height: 42px;
+      background: transparent;
+      font: 300 16px/26px "Poppins", sans-serif;
+      color: #fff;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin-top: 20px; }
+    #strength-weakness-section form input:focus {
+      box-shadow: 0 4px 2px -2px #51cbee; }
+    #strength-weakness-section form ::-webkit-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #strength-weakness-section form ::-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #strength-weakness-section form :-ms-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #strength-weakness-section form input:-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #strength-weakness-section form button {
+      margin-top: 20px; }
+
+/***** Career JOb Section *****/
+#career-job-section {
+  padding-top: 70px;
+  padding-bottom: 90px;
+  background: linear-gradient(180deg, #e5e5e5, #8c8c8c, #737373);
+  background-size: cover;
+  background-attachment: fixed; }
+  #career-job-section h1 {
+    margin-bottom: 50px;
+    color: #fff; }
+  #career-job-section p {
+    margin-bottom: 60px;
+    color: #fff; }
+  #career-job-section form {
+    /* firefox 19+ */
+    /* ie */ }
+    #career-job-section form input {
+      height: 42px;
+      background: transparent;
+      font: 300 16px/26px "Poppins", sans-serif;
+      color: #fff;
+      border: none;
+      box-shadow: none;
+      border-radius: 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin-top: 20px; }
+    #career-job-section form input:focus {
+      box-shadow: 0 4px 2px -2px #51cbee; }
+    #career-job-section form ::-webkit-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #career-job-section form ::-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #career-job-section form :-ms-input-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #career-job-section form input:-moz-placeholder {
+      color: #fff;
+      opacity: 0.8; }
+    #career-job-section form button {
+      margin-top: 20px; }
+
+
+/***** 14. Footer *****/
+footer {
+  padding-top: 22px;
+  padding-bottom: 18px;
+  background-color: #1a001a; }
+  footer p {
+    font: 300 14px/22px "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    opacity: 0.8;
+    width: 90%;
+    margin: 0 auto; }
+
+/***** 15. Back To Top Button *****/
+a.back-to-top {
+  display: none;
+  width: 40px;
+  height: 40px;
+  text-indent: -9999px;
+  position: fixed;
+  z-index: 999;
+  right: 10px;
+  bottom: 10px;
+  background: transparent url("../images/up-arrow.png") no-repeat center 47%;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-size: 18px 18px; }
+
+a:hover.back-to-top {
+  background-color: black; 
+  opacity: 0.5; }
+
+/***** 16. Media Queries *****/
+/*Min-width width 768*/
+@media (min-width: 768px) {
+  .navbar-brand.img-logo {
+    padding: 2px 0 0 0; }
+
+  .navbar-custom.affix .navbar-brand.img-logo {
+    width: 101px;
+    height: 35px;
+    margin-top: 6px; }
+
+  .navbar-custom {
+    background-color: transparent;
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none; }
+
+  .navbar-custom .navbar-brand {
+    font-size: 2em;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s; }
+
+  .navbar-custom .navbar-nav > .active > a {
+    border-radius: 3px; }
+
+  .navbar-custom.affix {
+    background-color: #071a24;
+    padding: 5px 0; }
+
+  a.navbar-brand.scrolling {
+    font: 300 28px/16px "Poppins", sans-serif;
+    margin-top: 0px; }
+
+  .navbar-custom.affix .navbar-brand {
+    font: 300 25px/20px "Poppins", sans-serif; }
+
+  .navbar-custom .nav li a.scrolling {
+    padding-left: 12px;
+    padding-right: 12px; }
+
+  a.navbar-brand.img-logo.scrolling {
+    margin-left: 0px; }
+
+  header {
+    min-height: 100%; }
+    header .header-content {
+      position: relative;
+      width: 100%;
+      padding: 100px 15px;
+      z-index: 2;
+      margin-top: 0px; }
+      header .header-content iframe {
+        width: 100%;
+        height: 100%; }
+      header .header-content .embed-responsive {
+        margin-top: 25px; }
+      header .header-content h1 {
+        font: 300 44px/56px "Poppins", sans-serif; }
+      header .header-content .header-buttons .button-large-transparent {
+        margin-top: 0px; }
+
+  #testimonials-section {
+    padding-top: 50px;
+    padding-bottom: 110px; }
+
+  #features-section {
+    padding-top: 110px;
+    padding-bottom: 50px; }
+    #features-section h1 {
+      margin-bottom: 80px; }
+    #features-section .sub-heading {
+      margin-left: 5%;
+      margin-right: 5%; }
+
+  #description-section {
+    padding-top: 110px;
+    padding-bottom: 120px; }
+    #description-section h1 {
+      margin-bottom: 80px; }
+    #description-section .first-row .text-center {
+      text-align: left; }
+    #description-section .second-row .nav-pills li {
+      width: auto;
+      text-align: initial; }
+    #description-section .second-row .text-center {
+      text-align: left; }
+
+  #screenshots-section {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+    #screenshots-section h1 {
+      margin-bottom: 90px; }
+    #screenshots-section #myCarousel {
+      margin-top: 0px; }
+
+  #free-trial-section {
+    padding-top: 110px;
+    padding-bottom: 120px; }
+    #free-trial-section h1 {
+      margin-bottom: 80px; }
+    #free-trial-section p {
+      margin-left: 5%;
+      margin-right: 5%; }
+
+  #applications-portfolio-section {
+    padding-top: 110px;
+    padding-bottom: 120px; }
+    #applications-portfolio-section h1 {
+      margin-bottom: 80px; }
+    #applications-portfolio-section img {
+      margin-top: 80px; }
+
+  #about-us-section {
+    padding-top: 110px;
+    padding-bottom: 120px; }
+    #about-us-section h1 {
+      margin-bottom: 80px; }
+    #about-us-section p {
+      margin-left: 5%;
+      margin-right: 5%; }
+
+  #contact-section {
+    padding-top: 110px;
+    padding-bottom: 120px; }
+    #contact-section h1 {
+      margin-bottom: 90px; }
+    #contact-section form button {
+      margin-top: 15px; }
+    #contact-section .location-information ul {
+      margin-top: 5px; }
+      #contact-section .location-information ul li {
+        display: inline; } }
+
+/** For social media buttons **/
+#social-media-section {
+  font-family: "Poppins", sans-serif;
+  color: black;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #66004d; }
+  #social-media-section span {
+    font-size: 40px;
+    color: white;
+    margin: 7px 5px 7px 5px; }
+  #social-media-section a {
+    color: white;
+    opacity: 0.7; }
+  #social-media-section a:hover {
+    opacity: 1; }
+
+.text2 h1{
+  font-size: 30px; 
+  text-align: center;
+  }
+
+.fa {
+  padding: 25px;
+  font-size: 30px;
+  width: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin: 7px 7px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 1;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: white;
+}
+
+.fa-twitter {
+  background: transparent;
+  color: white;
+}
+
+.fa-instagram {
+  background: transparent;
+  color: white;
+}
+
