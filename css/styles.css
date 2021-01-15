@@ -236,19 +236,69 @@ header{
 
 /* Header */
 
-header .header-buttons {
+header {
+  position: relative;
+  min-height: auto;
+  width: 100%;
+  background-color: #071a24;
+  /* Image displayed on mobile devices instead of video, to reduce data consumption and waiting time.
+  It's also the image shown if the video doesn't load for some reason.
+  Change this image with the first frame of your video, you can make and use a screenshot of it */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("http://placehold.it/1920x1080/202020/fff") no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%; }
+  header .flex-container-wrapper {
+    /* IE fix for vertical alignment in flex box */
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+  header .header-content {
+    background: linear-gradient(rgba(2, 13, 19, 0.7), rgba(2, 13, 19, 0.7));
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    z-index: 2;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh; }
+    header .header-content iframe {
+      width: 100%;
+      height: 100%; }
+    header .header-content .embed-responsive {
+      margin-top: 25px; }
+    header .header-content h1 {
+      font: 300 42px/52px "Poppins", sans-serif;
+      color: #fff;
+      margin-bottom: 25px;
+      margin-top: 35px; }
+    header .header-content p {
+      font: 300 16px/26px "Poppins", sans-serif;
+      color: #fff;
+      margin-left: 0%;
+      margin-right: 0%; }
+    header .header-content .app-price {
+      margin-top: 30px;
+      font: 300 44px/56px "Poppins", sans-serif;
+      text-align: center; }
+      header .header-content .app-price a {
+        font: 300 16px/26px "Poppins", sans-serif;
+        color: #fff;
+        text-decoration: underline; }
+    header .header-content .header-buttons {
       margin-top: 25px;
-      text-align: center;
-      background: pink; }
-      header .header-buttons a {
+      text-align: center; }
+      header .header-content .header-buttons a {
         display: inline-block;
         margin-right: 5px;
-        padding: 6px 30px 6px 30px;
-        background: maroon; }
+        padding: 8px 40px 8px 40px; }
       header .header-content .header-buttons .button-large-transparent {
         margin-top: 20px;
-        padding: 6px 30px 6px 30px; }
-
+        padding: 6px 40px 6px 40px; }
 #personal-section {
   padding-top: 90px;
   padding-bottom: 60px;
